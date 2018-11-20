@@ -1,0 +1,12 @@
+extends layout
+block content
+  .container
+    h1.text-center #{title}
+    each service, i in services
+      div.well
+        .row
+          .col-lg-9
+            h3 #{service.name}
+            p #{service.desciption}
+          .col-lg-3
+            img.img-thumbnail.img-responsive.center-block(src=service.image,width="250",heigh="250")

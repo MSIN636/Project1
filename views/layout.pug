@@ -1,0 +1,37 @@
+head
+  title=title
+  link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+  link(href='/stylesheets/style.css', rel='stylesheet')
+
+  meta(name="viewport",content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+  script(src="/javascripts/bootstrap.js")
+
+body
+  nav.navbar.navbar-inverse.navbar.fixed-top#navigation
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='#') Web Masters
+      #navbar.collapse.navbar-collapse.navbar-right
+        ul.nav.navbar-nav
+          li(class=title=='Home'?'active' : undefined)
+            a(href='/') Home
+          li(class=title=='Services'?'active' : undefined)
+              a(href='/services') Services
+          li(class=title=='About'?'active' : undefined)
+            a(href='/about') About
+          li(class=title=='Contact'?'active' : undefined)
+            a(href='/contact') Contact
+
+  block content
+
+  hr
+  footer.py-5.bg-dark
+    .container-fluid
+      p.m-0.text-center Copyright © Your Website 2018
